@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="uz" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ozodbek Sobirjonovich — Full‑stack dasturchi va AI muhandisi</title>
+  <meta name="description" content="Ozodbek Sobirjonovich — veb-saytlar, mobil va desktop ilovalar, Telegram botlar va AI integratsiyalarni ishlab chiquvchi full‑stack dasturchi. Loyihangizni bugun boshlang: +998 91 332 34 31." />
+  <meta name="keywords" content="Ozodbek Sobirjonovich, dasturchi, sayt yaratish, mobil ilova, telegram bot, AI integratsiya, web developer Uzbekistan, Toshkent" />
+  <meta name="author" content="Ozodbek Sobirjonovich" />
+  <meta name="theme-color" content="#07070c" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ozodbek Sobirjonovich — Full‑stack dasturchi" />
+  <meta property="og:description" content="Saytlar, mobil ilovalar, desktop dasturlar, Telegram botlar va AI yechimlar." />
+  <meta property="og:url" content="https://ozodbeksobirjonovich.uz" />
+  <link rel="canonical" href="https://ozodbeksobirjonovich.uz" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%2300e0b8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='28' text-anchor='middle' fill='white'%3EOS%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    if (window.tailwind) tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Unbounded', 'system-ui', 'sans-serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            ink: { 950: '#07070c', 900: '#0c0c14', 800: '#13131e', 700: '#1c1c2b', 600: '#2a2a3d' },
+            brand: { DEFAULT: '#7c5cff', 300: '#b3a1ff', 400: '#9a80ff', 500: '#7c5cff', 600: '#6442f5' },
+            mint: { DEFAULT: '#00e0b8', 400: '#2cf0cc' },
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    /* Lucide ikonkalari (ichki, tashqi kutubxonasiz) */
+    window.lucide = { icons: {"arrow-up-right":"<path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/>","menu":"<line x1=\"4\" x2=\"20\" y1=\"12\" y2=\"12\"/><line x1=\"4\" x2=\"20\" y1=\"6\" y2=\"6\"/><line x1=\"4\" x2=\"20\" y1=\"18\" y2=\"18\"/>","arrow-right":"<path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/>","layout-grid":"<rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\"/>","star":"<polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/>","sparkles":"<path d=\"m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z\"/><path d=\"M5 3v4\"/><path d=\"M19 17v4\"/><path d=\"M3 5h4\"/><path d=\"M17 19h4\"/>","send":"<path d=\"m22 2-7 20-4-9-9-4Z\"/><path d=\"M22 2 11 13\"/>","smartphone":"<rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\"/><path d=\"M12 18h.01\"/>","shield-check":"<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/>","rocket":"<path d=\"M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z\"/><path d=\"m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z\"/><path d=\"M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0\"/><path d=\"M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5\"/>","gauge":"<path d=\"m12 14 4-4\"/><path d=\"M3.34 19a10 10 0 1 1 17.32 0\"/>","brain-circuit":"<path d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\"/><path d=\"M9 13a4.5 4.5 0 0 0 3-4\"/><path d=\"M6.003 5.125A3 3 0 0 0 6.401 6.5\"/><path d=\"M3.477 10.896a4 4 0 0 1 .585-.396\"/><path d=\"M6 18a4 4 0 0 1-1.967-.516\"/><path d=\"M12 13h4\"/><path d=\"M12 18h6a2 2 0 0 1 2 2v1\"/><path d=\"M12 8h8\"/><path d=\"M16 8V5a2 2 0 0 1 2-2\"/><circle cx=\"16\" cy=\"13\" r=\".5\"/><circle cx=\"18\" cy=\"3\" r=\".5\"/><circle cx=\"20\" cy=\"21\" r=\".5\"/><circle cx=\"20\" cy=\"8\" r=\".5\"/>","handshake":"<path d=\"m11 17 2 2a1 1 0 1 0 3-3\"/><path d=\"m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4\"/><path d=\"m21 3 1 11h-2\"/><path d=\"M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3\"/><path d=\"M3 4h8\"/>","globe":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"/><path d=\"M2 12h20\"/>","bot":"<path d=\"M12 8V4H8\"/><rect width=\"16\" height=\"12\" x=\"4\" y=\"8\" rx=\"2\"/><path d=\"M2 14h2\"/><path d=\"M20 14h2\"/><path d=\"M15 13v2\"/><path d=\"M9 13v2\"/>","monitor":"<rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"21\" y2=\"21\"/><line x1=\"12\" x2=\"12\" y1=\"17\" y2=\"21\"/>","pen-tool":"<path d=\"m12 19 7-7 3 3-7 7-3-3z\"/><path d=\"m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\"/><path d=\"m2 2 7.586 7.586\"/><circle cx=\"11\" cy=\"11\" r=\"2\"/>","server-cog":"<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5\"/><path d=\"M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5\"/><path d=\"M6 6h.01\"/><path d=\"M6 18h.01\"/><path d=\"m15.7 13.4-.9-.3\"/><path d=\"m9.2 10.9-.9-.3\"/><path d=\"m10.6 15.7.3-.9\"/><path d=\"m13.6 15.7-.4-1\"/><path d=\"m10.8 9.3-.4-1\"/><path d=\"m8.3 13.6 1-.4\"/><path d=\"m14.7 10.8 1-.4\"/><path d=\"m13.4 8.3-.3.9\"/>","github":"<path d=\"M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4\"/><path d=\"M9 18c-4.51 2-5-2-7-2\"/>","timer":"<line x1=\"10\" x2=\"14\" y1=\"2\" y2=\"2\"/><line x1=\"12\" x2=\"15\" y1=\"14\" y2=\"11\"/><circle cx=\"12\" cy=\"14\" r=\"8\"/>","file-code-2":"<path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"m5 12-3 3 3 3\"/><path d=\"m9 18 3-3-3-3\"/>","life-buoy":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m4.93 4.93 4.24 4.24\"/><path d=\"m14.83 9.17 4.24-4.24\"/><path d=\"m14.83 14.83 4.24 4.24\"/><path d=\"m9.17 14.83-4.24 4.24\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/>","plus":"<path d=\"M5 12h14\"/><path d=\"M12 5v14\"/>","phone":"<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/>","phone-call":"<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/><path d=\"M14.05 2a9 9 0 0 1 8 7.94\"/><path d=\"M14.05 6A5 5 0 0 1 18 10\"/>","message-circle":"<path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\"/>","arrow-up":"<path d=\"m5 12 7-7 7 7\"/><path d=\"M12 19V5\"/>","lock":"<rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\"/><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"/>","coins":"<circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M18.09 10.37A6 6 0 1 1 10.34 18\"/><path d=\"M7 6h1v4\"/><path d=\"m16.71 13.88.7.71-2.82 2.82\"/>","atom":"<circle cx=\"12\" cy=\"12\" r=\"1\"/><path d=\"M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z\"/><path d=\"M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z\"/>","graduation-cap":"<path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\"/><path d=\"M22 10v6\"/><path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\"/>","box":"<path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/>","stethoscope":"<path d=\"M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3\"/><path d=\"M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4\"/><circle cx=\"20\" cy=\"10\" r=\"2\"/>","building-2":"<path d=\"M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z\"/><path d=\"M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2\"/><path d=\"M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2\"/><path d=\"M10 6h4\"/><path d=\"M10 10h4\"/><path d=\"M10 14h4\"/><path d=\"M10 18h4\"/>","keyboard":"<path d=\"M10 8h.01\"/><path d=\"M12 12h.01\"/><path d=\"M14 8h.01\"/><path d=\"M16 12h.01\"/><path d=\"M18 8h.01\"/><path d=\"M6 8h.01\"/><path d=\"M7 16h10\"/><path d=\"M8 12h.01\"/><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/>","shopping-bag":"<path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z\"/><path d=\"M3 6h18\"/><path d=\"M16 10a4 4 0 0 1-8 0\"/>","layers":"<path d=\"m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z\"/><path d=\"m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65\"/><path d=\"m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65\"/>","wind":"<path d=\"M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2\"/><path d=\"M9.6 4.6A2 2 0 1 1 11 8H2\"/><path d=\"M12.6 19.4A2 2 0 1 0 14 16H2\"/>","hexagon":"<path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/>","code-2":"<path d=\"m18 16 4-4-4-4\"/><path d=\"m6 8-4 4 4 4\"/><path d=\"m14.5 4-5 16\"/>","braces":"<path d=\"M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1\"/><path d=\"M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1\"/>","tablet-smartphone":"<rect width=\"10\" height=\"14\" x=\"3\" y=\"8\" rx=\"2\"/><path d=\"M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4\"/><path d=\"M8 18h.01\"/>","database":"<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/>","container":"<path d=\"M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z\"/><path d=\"M10 21.9V14L2.1 9.1\"/><path d=\"m10 14 11.9-6.9\"/><path d=\"M14 19.8v-8.1\"/><path d=\"M18 17.5V9.4\"/>"},
+      createIcons() {
+        document.querySelectorAll('i[data-lucide]').forEach(el => {
+          const body = this.icons[el.dataset.lucide]; if (!body) return;
+          el.outerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="${el.className}">${body}</svg>`;
+        });
+      } };
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ozodbek Sobirjonovich",
+    "jobTitle": "Full-stack dasturchi, AI muhandisi",
+    "url": "https://ozodbeksobirjonovich.uz",
+    "telephone": ["+998913323431", "+998939923431"],
+    "address": { "@type": "PostalAddress", "addressCountry": "UZ" },
+    "knowsAbout": ["Web development", "Mobile apps", "Desktop apps", "Telegram bots", "AI integration"]
+  }
+  </script>
+
+  <style>
+    :root { --mx: 50%; --my: 50%; }
+    html { background: #07070c; }
+    body { background: #07070c; color: #e8e8f0; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #7c5cff; color: #fff; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #07070c; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(#7c5cff, #00e0b8); border-radius: 10px; border: 2px solid #07070c; }
+
+    .text-grad { background: linear-gradient(100deg, #b3a1ff 0%, #7c5cff 30%, #00e0b8 70%, #b3f5e8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% auto; animation: shine 8s linear infinite; }
+    @keyframes shine { to { background-position: 200% center; } }
+
+    .grid-bg { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 100%); -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 100%); }
+    .noise::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+    .spotlight { position: fixed; inset: 0; pointer-events: none; z-index: 1; background: radial-gradient(600px circle at var(--mx) var(--my), rgba(124,92,255,.10), transparent 40%); }
+
+    .glass { background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+    .card { position: relative; background: linear-gradient(180deg, #11111b, #0c0c14); border: 1px solid rgba(255,255,255,.07); border-radius: 1.5rem; overflow: hidden; transition: border-color .4s, transform .4s cubic-bezier(.2,.8,.2,1); }
+    .card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .4s; background: radial-gradient(420px circle at var(--cx, 50%) var(--cy, 50%), rgba(124,92,255,.16), transparent 45%); }
+    .card:hover { border-color: rgba(124,92,255,.35); }
+    .card:hover::before { opacity: 1; }
+
+    .btn-primary { position: relative; isolation: isolate; overflow: hidden; background: linear-gradient(100deg, #7c5cff, #5b3df0); box-shadow: 0 10px 40px -10px rgba(124,92,255,.8), inset 0 1px 0 rgba(255,255,255,.25); }
+    .btn-primary::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,.35) 50%, transparent 80%); transform: translateX(-120%); transition: transform .8s; }
+    .btn-primary:hover::after { transform: translateX(120%); }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .marquee { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee-wrap:hover .marquee { animation-play-state: paused; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    .float-a { animation: floatA 6s ease-in-out infinite; }
+    .float-b { animation: floatA 7s ease-in-out -2s infinite; }
+    .float-c { animation: floatA 8s ease-in-out -4s infinite; }
+    @keyframes floatA { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+
+    .orbit { animation: spin 40s linear infinite; }
+    .orbit-rev { animation: spin 60s linear infinite reverse; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Personaj animatsiyalari */
+    .wave-arm { transform-origin: 292px 330px; animation: wave 2.6s ease-in-out infinite; }
+    @keyframes wave { 0%,60%,100% { transform: rotate(0deg) } 10% { transform: rotate(-14deg) } 20% { transform: rotate(8deg) } 30% { transform: rotate(-12deg) } 40% { transform: rotate(6deg) } 50% { transform: rotate(-4deg) } }
+    .blink { transform-box: fill-box; transform-origin: center; animation: blink 5s infinite; }
+    @keyframes blink { 0%,94%,100% { transform: scaleY(1) } 96% { transform: scaleY(.08) } }
+    .head-bob { transform-origin: 200px 270px; animation: bob 6s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: rotate(0deg) } 50% { transform: rotate(2deg) } }
+    .code-line { animation: typeLine 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: left; }
+    @keyframes typeLine { 0% { transform: scaleX(0) } 40%,80% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+
+    .pulse-dot::before { content: ""; position: absolute; inset: -4px; border-radius: 9999px; background: #22c55e; opacity: .5; animation: ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
+    @keyframes ping { 75%,100% { transform: scale(2.2); opacity: 0; } }
+
+    .caret { display: inline-block; width: 3px; height: 1em; margin-left: 4px; vertical-align: -0.12em; background: #00e0b8; animation: caret 1s steps(1) infinite; }
+    @keyframes caret { 50% { opacity: 0 } }
+
+    .filter-btn.active { background: #fff; color: #07070c; border-color: #fff; }
+
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .proj-enter { animation: projIn .6s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes projIn { from { opacity: 0; transform: translateY(20px) scale(.98) } to { opacity: 1; transform: none } }
+
+    .loader-done { opacity: 0; visibility: hidden; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body class="font-sans noise overflow-x-hidden">
+
+  <!-- Preloader -->
+  <div id="loader" class="fixed inset-0 z-[100] grid place-items-center bg-ink-950 transition-all duration-700">
+    <div class="flex flex-col items-center gap-5">
+      <div class="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-brand to-mint grid place-items-center font-display font-extrabold text-xl text-white shadow-[0_0_60px_-10px_#7c5cff]">OS</div>
+      <div class="h-[3px] w-40 overflow-hidden rounded-full bg-white/10"><div id="loaderBar" class="h-full w-0 bg-gradient-to-r from-brand to-mint transition-all duration-500"></div></div>
+    </div>
+  </div>
+
+  <div class="spotlight" aria-hidden="true"></div>
+  <div id="progress" class="fixed left-0 top-0 z-[70] h-[2px] w-0 bg-gradient-to-r from-brand via-brand-300 to-mint"></div>
+
+  <!-- NAVBAR -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="mx-auto mt-4 max-w-6xl px-4">
+      <nav id="navInner" class="flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500">
+        <a href="#top" class="flex items-center gap-2.5 group">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand to-mint font-display text-sm font-extrabold text-white transition-transform group-hover:rotate-6">OS</span>
+          <span class="font-display text-[15px] font-semibold tracking-tight">Ozodbek<span class="text-mint">.</span></span>
+        </a>
+        <ul class="hidden items-center gap-1 text-sm text-white/70 md:flex">
+          <li><a href="#about" class="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white">Men haqimda</a></li>
+          <li><a href="#services" class="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white">Xizmatlar</a></li>
+          <li><a href="#projects" class="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white">Loyihalar</a></li>
+          <li><a href="#process" class="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white">Jarayon</a></li>
+          <li><a href="#faq" class="rounded-lg px-3 py-2 transition hover:bg-white/5 hover:text-white">FAQ</a></li>
+        </ul>
+        <div class="flex items-center gap-2">
+          <a href="#contact" class="btn-primary hidden rounded-xl px-4 py-2.5 text-sm font-semibold text-white sm:inline-flex items-center gap-2">Loyiha boshlash <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+          <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 md:hidden" aria-label="Menyu"><i data-lucide="menu" class="h-5 w-5"></i></button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="glass mt-2 hidden rounded-2xl p-3 md:hidden">
+        <a href="#about" class="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5">Men haqimda</a>
+        <a href="#services" class="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5">Xizmatlar</a>
+        <a href="#projects" class="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5">Loyihalar</a>
+        <a href="#process" class="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5">Jarayon</a>
+        <a href="#faq" class="block rounded-xl px-4 py-3 text-white/80 hover:bg-white/5">FAQ</a>
+        <a href="#contact" class="btn-primary mt-2 block rounded-xl px-4 py-3 text-center font-semibold text-white">Loyiha boshlash</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="relative z-10">
+
+    <!-- HERO -->
+    <section class="relative min-h-screen overflow-hidden pt-32 pb-20 lg:pt-36">
+      <div class="grid-bg absolute inset-0" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-brand/25 blur-[140px]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute right-[-10%] top-1/3 h-[420px] w-[420px] rounded-full bg-mint/15 blur-[120px]" aria-hidden="true"></div>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-4 lg:grid-cols-[1.15fr_.85fr]">
+        <div>
+          <div class="reveal inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[.04] py-1.5 pl-2 pr-4 text-xs text-white/80 sm:text-sm">
+            <span class="relative h-2.5 w-2.5 rounded-full bg-green-500 pulse-dot"></span>
+            Yangi buyurtmalar uchun ochiqman
+          </div>
+
+          <h1 class="reveal mt-7 font-display text-[2.25rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.4rem]" style="transition-delay:.08s">
+            G‘oyangizni <br class="hidden sm:block" />
+            <span class="text-grad">ishlaydigan biznesga</span><br class="hidden sm:block" />
+            aylantiraman.
+          </h1>
+
+          <p class="reveal mt-6 max-w-xl text-lg leading-relaxed text-white/65" style="transition-delay:.16s">
+            Salom, men <b class="font-semibold text-white">Ozodbek Sobirjonovich</b> — <span id="typed" class="font-semibold text-mint"></span><span class="caret"></span><br />
+            Saytlar, mobil va desktop ilovalar, Telegram botlar hamda sun’iy intellekt yechimlarini g‘oyadan to ishga tushirishgacha bir qo‘lda olib boraman.
+          </p>
+
+          <div class="reveal mt-9 flex flex-wrap items-center gap-3" style="transition-delay:.24s">
+            <a href="#contact" class="btn-primary magnetic inline-flex items-center gap-2 rounded-2xl px-6 py-4 font-semibold text-white">
+              Loyihani muhokama qilish <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <a href="#projects" class="magnetic inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[.03] px-6 py-4 font-semibold text-white transition hover:bg-white/[.07]">
+              <i data-lucide="layout-grid" class="h-5 w-5"></i> Ishlarimni ko‘rish
+            </a>
+          </div>
+
+          <div class="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-5" style="transition-delay:.32s">
+            <div class="flex -space-x-3">
+              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink-950 bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xs font-bold">W</span>
+              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink-950 bg-gradient-to-br from-sky-500 to-cyan-400 text-xs font-bold">M</span>
+              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink-950 bg-gradient-to-br from-emerald-500 to-teal-400 text-xs font-bold">AI</span>
+              <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-ink-950 bg-gradient-to-br from-amber-500 to-orange-500 text-xs font-bold">B</span>
+            </div>
+            <div class="text-sm leading-snug text-white/60">
+              <div class="flex items-center gap-1 text-amber-400">
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i><i data-lucide="star" class="h-4 w-4 fill-current"></i>
+              </div>
+              <span class="text-white">Veb · Mobil · Desktop · Bot · AI</span> — barchasi bir joyda
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONAJ -->
+        <div class="reveal relative mx-auto w-full max-w-[460px]" style="transition-delay:.2s">
+          <div class="absolute inset-[6%] rounded-full border border-white/10 orbit" aria-hidden="true">
+            <span class="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-mint shadow-[0_0_20px_#00e0b8]"></span>
+          </div>
+          <div class="absolute inset-[-2%] rounded-full border border-dashed border-white/[.07] orbit-rev" aria-hidden="true">
+            <span class="absolute bottom-[12%] left-[6%] h-2.5 w-2.5 rounded-full bg-brand shadow-[0_0_20px_#7c5cff]"></span>
+          </div>
+          <div class="absolute inset-[16%] rounded-full bg-gradient-to-br from-brand/40 via-brand/10 to-mint/30 blur-2xl" aria-hidden="true"></div>
+
+          <svg viewBox="0 0 400 440" class="relative w-full drop-shadow-[0_30px_60px_rgba(124,92,255,.35)]" role="img" aria-label="Ozodbek personaji — qo‘l silkitayotgan dasturchi">
+            <defs>
+              <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2c6a0"/><stop offset="1" stop-color="#e3ac85"/></linearGradient>
+              <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#262d40"/><stop offset="1" stop-color="#151a27"/></linearGradient>
+              <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b211c"/><stop offset="1" stop-color="#120d0b"/></linearGradient>
+              <linearGradient id="laptop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5e9f2"/><stop offset="1" stop-color="#9aa3b5"/></linearGradient>
+              <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00e0b8"/></linearGradient>
+              <clipPath id="circleClip"><circle cx="200" cy="230" r="200"/></clipPath>
+            </defs>
+
+            <g clip-path="url(#circleClip)">
+              <!-- tana -->
+              <path d="M70 460 C76 350 120 296 200 290 C280 296 324 350 330 460 Z" fill="url(#suit)"/>
+              <!-- bo'yin -->
+              <path d="M176 236 h48 v52 c0 12 -48 12 -48 0 Z" fill="#d89b74"/>
+              <!-- ko'ylak -->
+              <path d="M168 290 L200 358 L232 290 L214 284 L200 300 L186 284 Z" fill="#f4f6fb"/>
+              <path d="M186 284 L200 300 L176 312 L168 290 Z" fill="#dfe4ee"/>
+              <path d="M214 284 L200 300 L224 312 L232 290 Z" fill="#dfe4ee"/>
+              <!-- lapellar -->
+              <path d="M164 292 L200 372 L180 300 L172 290 Z" fill="#0f1320"/>
+              <path d="M236 292 L200 372 L220 300 L228 290 Z" fill="#0f1320"/>
+              <circle cx="200" cy="392" r="3.5" fill="#0b0e18"/>
+              <!-- chap qo'l (pastda, noutbukni ushlab) -->
+              <path d="M96 360 C92 392 104 418 132 420 L150 410 C130 400 122 380 126 356 Z" fill="url(#suit)"/>
+
+              <!-- bosh guruh -->
+              <g class="head-bob">
+                <ellipse cx="132" cy="178" rx="12" ry="18" fill="#e3ac85"/>
+                <ellipse cx="268" cy="178" rx="12" ry="18" fill="#e3ac85"/>
+                <ellipse cx="134" cy="178" rx="5" ry="9" fill="#cf9670"/>
+                <ellipse cx="266" cy="178" rx="5" ry="9" fill="#cf9670"/>
+                <path d="M200 92 C246 92 270 124 270 172 C270 226 240 258 200 258 C160 258 130 226 130 172 C130 124 154 92 200 92 Z" fill="url(#skin)"/>
+                <!-- soqol soyasi -->
+                <path d="M146 208 C156 246 180 258 200 258 C220 258 244 246 254 208 C246 236 226 248 200 248 C174 248 154 236 146 208 Z" fill="#3a2a22" opacity=".14"/>
+                <!-- soch -->
+                <path d="M128 168 C120 112 150 76 200 74 C252 72 284 108 272 168 C268 146 258 132 244 124 C232 132 214 130 200 120 C186 132 160 134 148 126 C138 136 132 150 128 168 Z" fill="url(#hair)"/>
+                <path d="M160 92 C176 74 214 68 240 84 C222 80 196 82 178 96 Z" fill="#3d2f27" opacity=".7"/>
+                <!-- qoshlar -->
+                <path d="M156 150 C166 142 180 142 190 148" stroke="#1b1411" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <path d="M210 148 C220 142 234 142 244 150" stroke="#1b1411" stroke-width="7" stroke-linecap="round" fill="none"/>
+                <!-- ko'zlar -->
+                <g class="blink"><ellipse cx="173" cy="170" rx="7.5" ry="8.5" fill="#1d1612"/><circle cx="175.5" cy="167" r="2.4" fill="#fff"/></g>
+                <g class="blink"><ellipse cx="227" cy="170" rx="7.5" ry="8.5" fill="#1d1612"/><circle cx="229.5" cy="167" r="2.4" fill="#fff"/></g>
+                <path d="M162 180 C168 184 178 184 184 180" stroke="#c98f6a" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+                <path d="M216 180 C222 184 232 184 238 180" stroke="#c98f6a" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+                <!-- burun -->
+                <path d="M200 174 C196 190 192 198 198 202 C202 204 207 203 209 200" stroke="#c48a64" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <!-- yonoqlar -->
+                <ellipse cx="160" cy="204" rx="13" ry="8" fill="#f08f7a" opacity=".22"/>
+                <ellipse cx="240" cy="204" rx="13" ry="8" fill="#f08f7a" opacity=".22"/>
+                <!-- tabassum -->
+                <path d="M170 214 C184 236 216 236 230 214 C214 222 186 222 170 214 Z" fill="#fff" stroke="#8a4b3a" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M168 212 C172 210 174 210 176 214" stroke="#8a4b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M232 212 C228 210 226 210 224 214" stroke="#8a4b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </g>
+
+              <!-- noutbuk -->
+              <g>
+                <rect x="112" y="348" width="176" height="112" rx="12" fill="url(#laptop)"/>
+                <rect x="112" y="348" width="176" height="112" rx="12" fill="none" stroke="#fff" stroke-opacity=".5"/>
+                <circle cx="200" cy="398" r="22" fill="url(#screenGlow)" opacity=".95"/>
+                <text x="200" y="405" text-anchor="middle" font-family="Unbounded, Arial" font-weight="800" font-size="18" fill="#fff">OS</text>
+                <rect x="96" y="452" width="208" height="12" rx="6" fill="#c3c9d6"/>
+              </g>
+            </g>
+
+            <!-- silkitayotgan qo'l (doiradan chiqib turadi) -->
+            <g class="wave-arm">
+              <path d="M282 316 C312 300 330 270 334 230 L362 232 C362 280 340 330 300 352 Z" fill="url(#suit)"/>
+              <rect x="330" y="220" width="36" height="14" rx="5" fill="#f4f6fb"/>
+              <g fill="url(#skin)">
+                <ellipse cx="348" cy="200" rx="22" ry="26"/>
+                <rect x="326" y="160" width="10" height="34" rx="5"/>
+                <rect x="338" y="152" width="10" height="38" rx="5"/>
+                <rect x="350" y="154" width="10" height="36" rx="5"/>
+                <rect x="362" y="164" width="9" height="30" rx="4.5"/>
+                <rect x="364" y="198" width="22" height="10" rx="5" transform="rotate(-30 364 198)"/>
+              </g>
+            </g>
+          </svg>
+
+          <!-- suzuvchi chiplar -->
+          <div class="float-a glass absolute -left-2 top-[18%] flex items-center gap-2 rounded-2xl px-3 py-2 text-xs font-semibold shadow-xl sm:-left-8 sm:text-sm">
+            <span class="grid h-7 w-7 place-items-center rounded-lg bg-brand/25 text-brand-300"><i data-lucide="sparkles" class="h-4 w-4"></i></span> AI integratsiya
+          </div>
+          <div class="float-b glass absolute -right-1 top-[62%] flex items-center gap-2 rounded-2xl px-3 py-2 text-xs font-semibold shadow-xl sm:-right-6 sm:text-sm">
+            <span class="grid h-7 w-7 place-items-center rounded-lg bg-sky-500/20 text-sky-300"><i data-lucide="send" class="h-4 w-4"></i></span> Telegram botlar
+          </div>
+          <div class="float-c glass absolute bottom-[8%] -left-1 flex items-center gap-2 rounded-2xl px-3 py-2 text-xs font-semibold shadow-xl sm:-left-6 sm:text-sm">
+            <span class="grid h-7 w-7 place-items-center rounded-lg bg-mint/20 text-mint"><i data-lucide="smartphone" class="h-4 w-4"></i></span> Mobil ilovalar
+          </div>
+          <div class="float-a glass absolute right-[6%] top-[2%] rounded-2xl px-3 py-2 font-mono text-[11px] text-white/80 shadow-xl sm:text-xs">
+            <span class="text-brand-300">const</span> sifat = <span class="text-mint">"100%"</span>;
+          </div>
+        </div>
+      </div>
+
+      <a href="#stats" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-white/40 md:flex">
+        <span>pastga</span>
+        <span class="grid h-10 w-6 justify-center rounded-full border border-white/20 pt-2"><span class="h-2 w-1 animate-bounce rounded-full bg-white/60"></span></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee-wrap relative border-y border-white/[.06] bg-white/[.015] py-6" aria-label="Texnologiyalar">
+      <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink-950 to-transparent"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink-950 to-transparent"></div>
+      <div class="overflow-hidden">
+        <div id="marquee" class="marquee gap-10 font-display text-lg font-medium text-white/40 sm:text-2xl"></div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="relative mx-auto max-w-6xl px-4 py-24">
+      <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div class="reveal card p-6 sm:p-8">
+          <div class="font-display text-4xl font-bold sm:text-5xl"><span class="counter" data-to="50">0</span><span class="text-mint">+</span></div>
+          <p class="mt-2 text-sm text-white/55">Topshirilgan loyihalar</p>
+        </div>
+        <div class="reveal card p-6 sm:p-8" style="transition-delay:.08s">
+          <div class="font-display text-4xl font-bold sm:text-5xl"><span class="counter" data-to="5">0</span><span class="text-mint">+</span></div>
+          <p class="mt-2 text-sm text-white/55">Yillik amaliy tajriba</p>
+        </div>
+        <div class="reveal card p-6 sm:p-8" style="transition-delay:.16s">
+          <div class="font-display text-4xl font-bold sm:text-5xl"><span class="counter" data-to="30">0</span><span class="text-mint">+</span></div>
+          <p class="mt-2 text-sm text-white/55">Mamnun mijozlar</p>
+        </div>
+        <div class="reveal card p-6 sm:p-8" style="transition-delay:.24s">
+          <div class="font-display text-4xl font-bold sm:text-5xl"><span class="counter" data-to="24">0</span><span class="text-mint">/7</span></div>
+          <p class="mt-2 text-sm text-white/55">Qo‘llab-quvvatlash</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="relative mx-auto max-w-6xl px-4 py-16 lg:py-24">
+      <div class="grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
+        <div class="reveal relative mx-auto w-full max-w-sm">
+          <div class="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-brand/40 to-mint/30 blur-2xl" aria-hidden="true"></div>
+          <div class="card relative rounded-[2rem] p-3">
+            <div class="relative overflow-hidden rounded-[1.6rem]">
+              <img src="data:image/jpeg;base64,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" alt="Ozodbek Sobirjonovich" class="aspect-[4/5] w-full object-cover object-center saturate-[1.1]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/10 to-transparent"></div>
+              <div class="absolute inset-x-4 bottom-4">
+                <p class="font-display text-xl font-semibold">Ozodbek Sobirjonovich</p>
+                <p class="text-sm text-white/70">Full‑stack dasturchi · AI muhandisi</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass float-b absolute -right-4 -top-4 rounded-2xl px-4 py-3 text-center shadow-2xl">
+            <div class="font-display text-2xl font-bold text-grad">A+</div>
+            <div class="text-[11px] text-white/60">sifat standarti</div>
+          </div>
+          <div class="glass float-c absolute -bottom-5 -left-4 flex items-center gap-3 rounded-2xl px-4 py-3 shadow-2xl">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-green-500/20 text-green-400"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+            <div class="text-xs leading-tight"><b class="block text-sm">Kafolat</b><span class="text-white/60">shartnoma asosida</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="reveal font-mono text-sm text-mint">// men haqimda</p>
+          <h2 class="reveal mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Kod yozaman — <span class="text-grad">natija</span> topshiraman.</h2>
+          <p class="reveal mt-6 text-lg leading-relaxed text-white/65">
+            Men ta’lim platformalari, tibbiyot, ko‘chmas mulk, savdo va moliya sohalarida real foydalanuvchilarga xizmat qilayotgan mahsulotlar yaratganman. Har bir loyihaga biznes egasi ko‘zi bilan qarayman: tez ishlashi, chiroyli ko‘rinishi, Google’da topilishi va eng muhimi — <b class="text-white">pul olib kelishi</b> kerak.
+          </p>
+          <div class="reveal mt-8 grid gap-3 sm:grid-cols-2">
+            <div class="flex items-start gap-3 rounded-2xl border border-white/[.07] bg-white/[.02] p-4">
+              <i data-lucide="rocket" class="mt-0.5 h-5 w-5 shrink-0 text-brand-300"></i>
+              <div><b>G‘oyadan relizgacha</b><p class="text-sm text-white/55">Dizayn, backend, frontend, deploy — barchasi bir qo‘lda.</p></div>
+            </div>
+            <div class="flex items-start gap-3 rounded-2xl border border-white/[.07] bg-white/[.02] p-4">
+              <i data-lucide="gauge" class="mt-0.5 h-5 w-5 shrink-0 text-mint"></i>
+              <div><b>Tezlik va SEO</b><p class="text-sm text-white/55">Lighthouse 90+ va qidiruvga moslangan tuzilma.</p></div>
+            </div>
+            <div class="flex items-start gap-3 rounded-2xl border border-white/[.07] bg-white/[.02] p-4">
+              <i data-lucide="brain-circuit" class="mt-0.5 h-5 w-5 shrink-0 text-fuchsia-300"></i>
+              <div><b>AI birinchi o‘rinda</b><p class="text-sm text-white/55">ChatGPT, Claude, Gemini — biznes jarayonlariga ulayman.</p></div>
+            </div>
+            <div class="flex items-start gap-3 rounded-2xl border border-white/[.07] bg-white/[.02] p-4">
+              <i data-lucide="handshake" class="mt-0.5 h-5 w-5 shrink-0 text-amber-300"></i>
+              <div><b>Uzoq muddatli hamkorlik</b><p class="text-sm text-white/55">Topshirgandan keyin ham yoningizdaman.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (bento) -->
+    <section id="services" class="relative mx-auto max-w-6xl px-4 py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="reveal font-mono text-sm text-mint">// xizmatlar</p>
+        <h2 class="reveal mt-3 font-display text-3xl font-bold sm:text-5xl">Qanday loyiha bo‘lsa ham — <span class="text-grad">qila olaman</span></h2>
+        <p class="reveal mt-5 text-white/60">Kichik landing sahifadan murakkab platforma va AI tizimlargacha. Siz faqat g‘oyani ayting.</p>
+      </div>
+
+      <div class="mt-14 grid auto-rows-[minmax(220px,auto)] gap-4 md:grid-cols-6">
+        <!-- Web -->
+        <article class="reveal card group p-7 md:col-span-4 md:row-span-2">
+          <div class="flex h-full flex-col">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand/15 text-brand-300"><i data-lucide="globe" class="h-6 w-6"></i></span>
+            <h3 class="mt-5 font-display text-2xl font-semibold">Veb-saytlar va platformalar</h3>
+            <p class="mt-3 max-w-md text-white/60">Korporativ saytlar, internet-do‘konlar, ta’lim platformalari, CRM/ERP, admin panellar. Zamonaviy dizayn, mukammal tezlik va qidiruv tizimlariga moslik.</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-white/10 px-3 py-1 text-white/70">Landing</span>
+              <span class="rounded-full border border-white/10 px-3 py-1 text-white/70">E‑commerce</span>
+              <span class="rounded-full border border-white/10 px-3 py-1 text-white/70">LMS</span>
+              <span class="rounded-full border border-white/10 px-3 py-1 text-white/70">CRM / ERP</span>
+              <span class="rounded-full border border-white/10 px-3 py-1 text-white/70">SaaS</span>
+            </div>
+            <!-- mini browser -->
+            <div class="mt-8 flex-1 rounded-2xl border border-white/10 bg-ink-950/80 p-3 transition-transform duration-500 group-hover:-translate-y-1">
+              <div class="flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-green-400/80"></span><span class="ml-3 h-5 flex-1 rounded-md bg-white/5 px-2 font-mono text-[10px] leading-5 text-white/40">https://sizning-biznesingiz.uz</span></div>
+              <div class="mt-3 grid grid-cols-3 gap-2">
+                <div class="col-span-2 h-24 rounded-xl bg-gradient-to-br from-brand/50 to-mint/30"></div>
+                <div class="space-y-2"><div class="h-11 rounded-xl bg-white/[.06]"></div><div class="h-11 rounded-xl bg-white/[.06]"></div></div>
+                <div class="h-14 rounded-xl bg-white/[.04]"></div><div class="h-14 rounded-xl bg-white/[.04]"></div><div class="h-14 rounded-xl bg-white/[.04]"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mobile -->
+        <article class="reveal card group p-7 md:col-span-2 md:row-span-2" style="transition-delay:.08s">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-mint/15 text-mint"><i data-lucide="smartphone" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-2xl font-semibold">Mobil ilovalar</h3>
+          <p class="mt-3 text-white/60">iOS va Android uchun bitta koddan tez, chiroyli ilovalar. Play Market va App Store’ga joylash.</p>
+          <div class="relative mx-auto mt-8 h-56 w-32 rounded-[1.6rem] border-[5px] border-ink-600 bg-ink-950 p-2 shadow-2xl transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105">
+            <div class="mx-auto mb-2 h-1.5 w-10 rounded-full bg-ink-600"></div>
+            <div class="h-16 rounded-xl bg-gradient-to-br from-mint/60 to-sky-500/40"></div>
+            <div class="mt-2 grid grid-cols-2 gap-1.5"><div class="h-10 rounded-lg bg-white/[.07]"></div><div class="h-10 rounded-lg bg-white/[.07]"></div><div class="h-10 rounded-lg bg-white/[.07]"></div><div class="h-10 rounded-lg bg-white/[.07]"></div></div>
+          </div>
+        </article>
+
+        <!-- Bots -->
+        <article class="reveal card p-7 md:col-span-2" style="transition-delay:.04s">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-sky-500/15 text-sky-300"><i data-lucide="bot" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-xl font-semibold">Telegram botlar</h3>
+          <p class="mt-2 text-sm text-white/60">Savdo, buyurtma, to‘lov (Click, Payme), CRM va admin panelli botlar.</p>
+        </article>
+
+        <!-- AI -->
+        <article class="reveal card p-7 md:col-span-2" style="transition-delay:.08s">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-fuchsia-500/15 text-fuchsia-300"><i data-lucide="sparkles" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-xl font-semibold">AI integratsiya</h3>
+          <p class="mt-2 text-sm text-white/60">Chat-assistentlar, hujjat tahlili, RAG, avtomatlashtirish va AI agentlar.</p>
+        </article>
+
+        <!-- Desktop -->
+        <article class="reveal card p-7 md:col-span-2" style="transition-delay:.12s">
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-amber-500/15 text-amber-300"><i data-lucide="monitor" class="h-6 w-6"></i></span>
+          <h3 class="mt-5 font-display text-xl font-semibold">Desktop dasturlar</h3>
+          <p class="mt-2 text-sm text-white/60">Windows, macOS, Linux uchun ombor, kassa, hisob-kitob va boshqaruv dasturlari.</p>
+        </article>
+
+        <!-- 3D/UI -->
+        <article class="reveal card p-7 md:col-span-3" style="transition-delay:.04s">
+          <div class="flex items-start gap-5">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-rose-500/15 text-rose-300"><i data-lucide="pen-tool" class="h-6 w-6"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-semibold">UI/UX va 3D dizayn</h3>
+              <p class="mt-2 text-sm text-white/60">Figma’da prototip, brending, 3D modellar va interaktiv vizualizatsiya.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Support -->
+        <article class="reveal card p-7 md:col-span-3" style="transition-delay:.08s">
+          <div class="flex items-start gap-5">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-500/15 text-emerald-300"><i data-lucide="server-cog" class="h-6 w-6"></i></span>
+            <div>
+              <h3 class="font-display text-xl font-semibold">Server, domen va qo‘llab-quvvatlash</h3>
+              <p class="mt-2 text-sm text-white/60">Hosting, SSL, CI/CD, zaxira nusxalar, monitoring va doimiy texnik xizmat.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="relative overflow-hidden py-24">
+      <div class="pointer-events-none absolute left-1/2 top-40 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-brand/10 blur-[140px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p class="reveal font-mono text-sm text-mint">// tanlangan ishlar</p>
+            <h2 class="reveal mt-3 font-display text-3xl font-bold sm:text-5xl">Loyihalarim <span class="text-grad">jonli ishlamoqda</span></h2>
+            <p class="reveal mt-4 max-w-xl text-white/60">Har biri real foydalanuvchilarga xizmat qilmoqda. Ustiga bosing — saytning o‘zini oching.</p>
+          </div>
+          <div id="filters" class="reveal flex flex-wrap gap-2"></div>
+        </div>
+
+        <div id="projectGrid" class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+        <div class="reveal mt-12 flex flex-col items-center justify-between gap-5 rounded-3xl border border-white/[.08] bg-gradient-to-r from-white/[.04] to-transparent p-6 sm:flex-row sm:p-8">
+          <div class="flex items-center gap-4">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white text-ink-950"><i data-lucide="github" class="h-6 w-6"></i></span>
+            <div><b class="font-display text-lg">Yana ko‘plab loyihalar GitHub’da</b><p class="text-sm text-white/55">Ochiq kodlar, botlar, kutubxonalar va tajribalar.</p></div>
+          </div>
+          <a href="https://github.com/ozodmeofficial" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 font-semibold transition hover:bg-white hover:text-ink-950">GitHub profil <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="relative mx-auto max-w-6xl px-4 py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="reveal font-mono text-sm text-mint">// ish jarayoni</p>
+        <h2 class="reveal mt-3 font-display text-3xl font-bold sm:text-5xl">Aniq reja. <span class="text-grad">Shaffof natija.</span></h2>
+      </div>
+      <div class="relative mt-16 grid gap-5 md:grid-cols-5">
+        <div class="absolute left-[10%] right-[10%] top-8 hidden h-px bg-gradient-to-r from-transparent via-white/20 to-transparent md:block" aria-hidden="true"></div>
+        <div class="reveal relative text-center">
+          <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-white/10 bg-ink-900 font-display text-lg font-bold text-brand-300 shadow-[0_0_40px_-10px_#7c5cff]">01</div>
+          <h3 class="mt-5 font-display font-semibold">Suhbat</h3>
+          <p class="mt-2 text-sm text-white/55">G‘oya, maqsad va auditoriyani aniqlaymiz. Bepul.</p>
+        </div>
+        <div class="reveal relative text-center" style="transition-delay:.08s">
+          <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-white/10 bg-ink-900 font-display text-lg font-bold text-brand-300">02</div>
+          <h3 class="mt-5 font-display font-semibold">Texnik topshiriq</h3>
+          <p class="mt-2 text-sm text-white/55">Muddat, narx va funksiyalar yozma kelishiladi.</p>
+        </div>
+        <div class="reveal relative text-center" style="transition-delay:.16s">
+          <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-white/10 bg-ink-900 font-display text-lg font-bold text-brand-300">03</div>
+          <h3 class="mt-5 font-display font-semibold">Dizayn</h3>
+          <p class="mt-2 text-sm text-white/55">Prototip va vizual dizaynni siz tasdiqlaysiz.</p>
+        </div>
+        <div class="reveal relative text-center" style="transition-delay:.24s">
+          <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-white/10 bg-ink-900 font-display text-lg font-bold text-brand-300">04</div>
+          <h3 class="mt-5 font-display font-semibold">Ishlab chiqish</h3>
+          <p class="mt-2 text-sm text-white/55">Har hafta jonli ko‘rsatuv va hisobot.</p>
+        </div>
+        <div class="reveal relative text-center" style="transition-delay:.32s">
+          <div class="mx-auto grid h-16 w-16 place-items-center rounded-2xl border border-mint/30 bg-mint/10 font-display text-lg font-bold text-mint shadow-[0_0_40px_-10px_#00e0b8]">05</div>
+          <h3 class="mt-5 font-display font-semibold">Ishga tushirish</h3>
+          <p class="mt-2 text-sm text-white/55">Deploy, o‘rgatish va kafolatli qo‘llab-quvvatlash.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="relative mx-auto max-w-6xl px-4 py-16">
+      <div class="reveal card p-8 sm:p-12">
+        <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <div>
+            <p class="font-mono text-sm text-mint">// texnologiyalar</p>
+            <h2 class="mt-3 font-display text-3xl font-bold">Eng zamonaviy <span class="text-grad">stack</span></h2>
+            <p class="mt-4 text-white/60">Loyihaga mos texnologiyani tanlayman — moda uchun emas, natija uchun. Natijada tizim tez, xavfsiz va kengaytirishga tayyor bo‘ladi.</p>
+          </div>
+          <div id="stack" class="grid grid-cols-2 gap-3 sm:grid-cols-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="relative mx-auto max-w-6xl px-4 py-24">
+      <div class="grid gap-5 md:grid-cols-3">
+        <div class="reveal card p-8">
+          <i data-lucide="timer" class="h-8 w-8 text-brand-300"></i>
+          <h3 class="mt-5 font-display text-xl font-semibold">Muddatga rioya</h3>
+          <p class="mt-2 text-white/60">Kelishilgan sanada topshiraman. Kechikish — mening muammom, sizniki emas.</p>
+        </div>
+        <div class="reveal card p-8" style="transition-delay:.08s">
+          <i data-lucide="file-code-2" class="h-8 w-8 text-mint"></i>
+          <h3 class="mt-5 font-display text-xl font-semibold">Kod sizniki</h3>
+          <p class="mt-2 text-white/60">Barcha manba kodlar, domen va serverga to‘liq huquq sizga topshiriladi.</p>
+        </div>
+        <div class="reveal card p-8" style="transition-delay:.16s">
+          <i data-lucide="life-buoy" class="h-8 w-8 text-amber-300"></i>
+          <h3 class="mt-5 font-display text-xl font-semibold">Kafolatli servis</h3>
+          <p class="mt-2 text-white/60">Topshirgandan keyin bepul kafolat davri va tezkor texnik yordam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="relative mx-auto max-w-3xl px-4 py-24">
+      <div class="text-center">
+        <p class="reveal font-mono text-sm text-mint">// savollar</p>
+        <h2 class="reveal mt-3 font-display text-3xl font-bold sm:text-5xl">Ko‘p beriladigan <span class="text-grad">savollar</span></h2>
+      </div>
+      <div class="mt-12 space-y-3">
+        <details class="reveal faq-item card group p-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold">Sayt yaratish qancha turadi?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 transition-transform"><i data-lucide="plus" class="h-4 w-4"></i></span></summary>
+          <p class="px-6 pb-6 text-white/60">Narx loyiha hajmi va funksiyalariga bog‘liq. Landing sahifa, korporativ sayt va murakkab platforma narxlari turlicha. Qo‘ng‘iroq qiling — 15 daqiqalik suhbatdan so‘ng aniq narx va muddatni aytaman.</p>
+        </details>
+        <details class="reveal faq-item card group p-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold">Loyiha qancha vaqtda tayyor bo‘ladi?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 transition-transform"><i data-lucide="plus" class="h-4 w-4"></i></span></summary>
+          <p class="px-6 pb-6 text-white/60">Landing — 3–7 kun, korporativ sayt yoki bot — 1–3 hafta, mobil ilova yoki platforma — 1–3 oy. Aniq muddat texnik topshiriqda yoziladi.</p>
+        </details>
+        <details class="reveal faq-item card group p-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold">To‘lov qanday amalga oshiriladi?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 transition-transform"><i data-lucide="plus" class="h-4 w-4"></i></span></summary>
+          <p class="px-6 pb-6 text-white/60">Odatda bosqichma-bosqich: oldindan to‘lov, oraliq natija va yakuniy topshirishda qolgan qismi. Naqd, karta yoki bank o‘tkazmasi orqali.</p>
+        </details>
+        <details class="reveal faq-item card group p-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold">Mavjud saytimni yangilab berasizmi?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 transition-transform"><i data-lucide="plus" class="h-4 w-4"></i></span></summary>
+          <p class="px-6 pb-6 text-white/60">Albatta. Redizayn, tezlikni oshirish, yangi funksiyalar, AI chat-assistent qo‘shish yoki to‘liq qayta yozish — barchasini qilaman.</p>
+        </details>
+        <details class="reveal faq-item card group p-0">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 font-semibold">Biznesimga AI qanday foyda beradi?<span class="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 transition-transform"><i data-lucide="plus" class="h-4 w-4"></i></span></summary>
+          <p class="px-6 pb-6 text-white/60">Mijozlarga 24/7 javob beruvchi assistent, hujjat va arizalarni avtomatik qayta ishlash, kontent yaratish, sotuv tahlili — xodimlar vaqtini tejaydi va daromadni oshiradi.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative px-4 py-24">
+      <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-brand/25 via-ink-900 to-mint/15 p-6 sm:p-12 lg:p-16">
+        <div class="grid-bg absolute inset-0 opacity-60" aria-hidden="true"></div>
+        <div class="relative grid gap-12 lg:grid-cols-2">
+          <div>
+            <p class="reveal font-mono text-sm text-mint">// aloqa</p>
+            <h2 class="reveal mt-3 font-display text-4xl font-bold leading-tight sm:text-6xl">Keling, <span class="text-grad">birga</span> yarataylik.</h2>
+            <p class="reveal mt-5 max-w-md text-lg text-white/65">Loyihangiz haqida yozing yoki qo‘ng‘iroq qiling. Odatda bir necha soat ichida javob beraman.</p>
+
+            <div class="reveal mt-10 space-y-3">
+              <a href="tel:+998913323431" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-950/50 p-4 transition hover:border-brand/50 hover:bg-ink-950/80">
+                <span class="grid h-12 w-12 place-items-center rounded-xl bg-brand/20 text-brand-300"><i data-lucide="phone" class="h-5 w-5"></i></span>
+                <div class="flex-1"><span class="block text-xs text-white/50">Asosiy raqam</span><span class="font-display text-lg font-semibold tracking-wide sm:text-xl">+998 91 332 34 31</span></div>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-white/40 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"></i>
+              </a>
+              <a href="tel:+998939923431" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-950/50 p-4 transition hover:border-mint/50 hover:bg-ink-950/80">
+                <span class="grid h-12 w-12 place-items-center rounded-xl bg-mint/15 text-mint"><i data-lucide="phone-call" class="h-5 w-5"></i></span>
+                <div class="flex-1"><span class="block text-xs text-white/50">Qo‘shimcha raqam</span><span class="font-display text-lg font-semibold tracking-wide sm:text-xl">+998 93 992 34 31</span></div>
+                <i data-lucide="arrow-up-right" class="h-5 w-5 text-white/40 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"></i>
+              </a>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="https://t.me/+998913323431" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-sky-500/10 p-4 font-semibold text-sky-200 transition hover:bg-sky-500/20"><i data-lucide="send" class="h-5 w-5"></i> Telegram</a>
+                <a href="https://wa.me/998913323431" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-green-500/10 p-4 font-semibold text-green-200 transition hover:bg-green-500/20"><i data-lucide="message-circle" class="h-5 w-5"></i> WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <form id="orderForm" class="reveal glass rounded-3xl p-6 sm:p-8" novalidate>
+            <h3 class="font-display text-2xl font-semibold">Buyurtma qoldirish</h3>
+            <p class="mt-1 text-sm text-white/55">Xabar WhatsApp orqali to‘g‘ridan-to‘g‘ri menga yuboriladi.</p>
+
+            <label class="mt-6 block text-sm text-white/70" for="fName">Ismingiz</label>
+            <input id="fName" required class="mt-2 w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 outline-none transition placeholder:text-white/30 focus:border-brand focus:ring-4 focus:ring-brand/20" placeholder="Ismingiz" />
+
+            <label class="mt-4 block text-sm text-white/70" for="fPhone">Telefon</label>
+            <input id="fPhone" type="tel" required class="mt-2 w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 outline-none transition placeholder:text-white/30 focus:border-brand focus:ring-4 focus:ring-brand/20" placeholder="+998 __ ___ __ __" />
+
+            <span class="mt-4 block text-sm text-white/70">Loyiha turi</span>
+            <div id="typeChips" class="mt-2 flex flex-wrap gap-2">
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">Veb-sayt</button>
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">Mobil ilova</button>
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">Telegram bot</button>
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">AI yechim</button>
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">Desktop</button>
+              <button type="button" class="chip rounded-full border border-white/15 px-3.5 py-1.5 text-sm transition">Boshqa</button>
+            </div>
+
+            <label class="mt-4 block text-sm text-white/70" for="fMsg">Loyiha haqida qisqacha</label>
+            <textarea id="fMsg" rows="4" class="mt-2 w-full resize-none rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 outline-none transition placeholder:text-white/30 focus:border-brand focus:ring-4 focus:ring-brand/20" placeholder="Masalan: onlayn do‘kon uchun sayt va Telegram bot kerak..."></textarea>
+
+            <p id="formErr" class="mt-3 hidden text-sm text-rose-300">Iltimos, ism va telefon raqamni kiriting.</p>
+
+            <button type="submit" class="btn-primary mt-6 flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 font-semibold text-white">
+              Yuborish <i data-lucide="send" class="h-5 w-5"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-white/[.06]">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="select-none font-display text-[13vw] font-extrabold leading-none tracking-tighter text-white/[.04] lg:text-[9.5rem]">OZODBEK</div>
+      <div class="mt-8 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand to-mint font-display text-sm font-extrabold">OS</span>
+          <div class="text-sm"><b class="block">Ozodbek Sobirjonovich</b><span class="text-white/50">© <span id="year"></span> · Barcha huquqlar himoyalangan</span></div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://github.com/ozodmeofficial" target="_blank" rel="noopener" aria-label="GitHub" class="grid h-11 w-11 place-items-center rounded-xl border border-white/10 transition hover:bg-white hover:text-ink-950"><i data-lucide="github" class="h-5 w-5"></i></a>
+          <a href="https://t.me/+998913323431" target="_blank" rel="noopener" aria-label="Telegram" class="grid h-11 w-11 place-items-center rounded-xl border border-white/10 transition hover:bg-sky-500 hover:border-sky-500"><i data-lucide="send" class="h-5 w-5"></i></a>
+          <a href="tel:+998913323431" aria-label="Qo‘ng‘iroq" class="grid h-11 w-11 place-items-center rounded-xl border border-white/10 transition hover:bg-brand hover:border-brand"><i data-lucide="phone" class="h-5 w-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating call + back to top -->
+  <a href="tel:+998913323431" class="fixed bottom-5 left-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-green-500 text-white shadow-[0_10px_40px_-5px_rgba(34,197,94,.7)] md:hidden" aria-label="Qo‘ng‘iroq qilish"><i data-lucide="phone" class="h-6 w-6"></i></a>
+  <button id="toTop" class="fixed bottom-5 right-5 z-40 grid h-12 w-12 translate-y-20 place-items-center rounded-full border border-white/15 bg-ink-900/80 opacity-0 backdrop-blur transition-all duration-500" aria-label="Yuqoriga"><i data-lucide="arrow-up" class="h-5 w-5"></i></button>
+
+  <script>
+    /* ====== MA'LUMOTLAR — shu yerdan oson tahrirlang ====== */
+    const PROJECTS = [
+      { name: 'CoinTizim', url: 'https://cointizim.uz', cat: ['web', 'biznes'], icon: 'coins', from: '#f59e0b', to: '#ef4444',
+        desc: 'O‘quvchilar va xodimlarni coin ballar orqali rag‘batlantirish hamda hisobini yuritish tizimi.', tags: ['Platforma', 'Admin panel', 'Hisobot'] },
+      { name: 'STEM Fizika', url: 'https://stemfizika.uz', cat: ['web', 'talim'], icon: 'atom', from: '#7c5cff', to: '#06b6d4',
+        desc: 'STEM yondashuvidagi fizika ta’lim platformasi: darslar, tajribalar va interaktiv materiallar.', tags: ['EdTech', 'LMS', 'Interaktiv'] },
+      { name: 'PhyLearn', url: 'https://phylearn.uz', cat: ['web', 'talim'], icon: 'graduation-cap', from: '#2563eb', to: '#22d3ee',
+        desc: 'Fizikani onlayn o‘rganish platformasi — video darslar, testlar va natijalar tahlili.', tags: ['EdTech', 'Testlar', 'Kabinet'] },
+      { name: '3D Modeling', url: 'https://3dmodeling.uz', cat: ['web', 'talim'], icon: 'box', from: '#ec4899', to: '#8b5cf6',
+        desc: '3D modellashtirish bo‘yicha kurslar va ishlar galereyasi bilan zamonaviy platforma.', tags: ['3D', 'Kurslar', 'Galereya'] },
+      { name: 'Allergolog', url: 'https://allergolog.uz', cat: ['web', 'biznes'], icon: 'stethoscope', from: '#10b981', to: '#0ea5e9',
+        desc: 'Allergolog shifokor uchun sayt: xizmatlar, maqolalar va onlayn qabulga yozilish.', tags: ['Tibbiyot', 'Onlayn qabul', 'SEO'] },
+      { name: 'Rieltor24', url: 'https://rieltor24.uz', cat: ['web', 'biznes'], icon: 'building-2', from: '#0ea5e9', to: '#6366f1',
+        desc: 'Ko‘chmas mulk e’lonlari platformasi: qidiruv, filtrlar, xarita va rieltorlar kabineti.', tags: ['Real estate', 'Filtrlar', 'Kabinet'] },
+      { name: 'SpeedTyper', url: 'https://speedtyper.uz', cat: ['web', 'talim'], icon: 'keyboard', from: '#22c55e', to: '#a3e635',
+        desc: 'Tez yozishni o‘rgatuvchi trenajyor: WPM o‘lchash, reyting va o‘zbek tilidagi matnlar.', tags: ['Trenajyor', 'Reyting', 'Real-time'] },
+      { name: 'TezBaraka', url: 'https://tezbaraka.uz', cat: ['web', 'biznes'], icon: 'shopping-bag', from: '#f97316', to: '#facc15',
+        desc: 'Tezkor savdo va buyurtma xizmati — qulay katalog, savat va buyurtmalarni boshqarish.', tags: ['E‑commerce', 'Buyurtma', 'To‘lov'] },
+      { name: 'MobiControl', url: '', cat: ['mobil'], icon: 'smartphone', from: '#00e0b8', to: '#7c5cff', mobile: true,
+        desc: 'Mobil qurilmalar va jarayonlarni masofadan boshqarish uchun ilova. Android va iOS.', tags: ['Mobil ilova', 'Android', 'iOS'] },
+      { name: 'Telegram botlar', url: '', cat: ['bot', 'ai'], icon: 'bot', from: '#38bdf8', to: '#2563eb',
+        desc: 'Buyurtma, to‘lov, CRM va AI-assistentli botlar — bizneslar uchun avtomatlashtirish.', tags: ['Bot', 'Click/Payme', 'AI'] },
+      { name: 'AI yechimlar', url: '', cat: ['ai'], icon: 'brain-circuit', from: '#a855f7', to: '#ec4899',
+        desc: 'Chat-assistentlar, hujjat tahlili va biznes jarayonlariga sun’iy intellekt integratsiyasi.', tags: ['LLM', 'RAG', 'Avtomatlashtirish'] },
+      { name: 'Desktop dasturlar', url: '', cat: ['desktop'], icon: 'monitor', from: '#64748b', to: '#0ea5e9',
+        desc: 'Ombor, kassa va hisob-kitob uchun tezkor, oflayn ishlaydigan desktop dasturlar.', tags: ['Windows', 'Oflayn', 'Hisobot'] },
+    ];
+    const FILTERS = [
+      ['all', 'Hammasi'], ['web', 'Saytlar'], ['talim', 'Ta’lim'], ['biznes', 'Biznes'], ['mobil', 'Mobil'], ['bot', 'Botlar'], ['ai', 'AI'], ['desktop', 'Desktop'],
+    ];
+    const STACK = [
+      ['React / Next.js', 'atom'], ['Vue / Nuxt', 'layers'], ['Tailwind CSS', 'wind'], ['Node.js', 'hexagon'], ['Python / Django', 'code-2'], ['Laravel / PHP', 'braces'],
+      ['Flutter', 'smartphone'], ['React Native', 'tablet-smartphone'], ['Electron', 'monitor'], ['PostgreSQL', 'database'], ['Docker / Linux', 'container'], ['OpenAI / Claude', 'sparkles'],
+    ];
+    const ROLES = ['full‑stack dasturchi.', 'AI integratsiya mutaxassisi.', 'mobil ilovalar yaratuvchisi.', 'Telegram bot arxitektori.', 'sizning texnik hamkoringiz.'];
+    const MARQUEE = ['React', 'Next.js', 'Python', 'Django', 'Node.js', 'Flutter', 'Laravel', 'Tailwind', 'PostgreSQL', 'Docker', 'OpenAI', 'Claude', 'Telegram API', 'Electron', 'Figma'];
+
+    /* ====== RENDER ====== */
+    const $ = (s, r = document) => r.querySelector(s);
+    const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+    $('#marquee').innerHTML = [...MARQUEE, ...MARQUEE].map(t => `<span class="flex items-center gap-10 whitespace-nowrap">${t}<span class="text-brand/60">✦</span></span>`).join('');
+
+    $('#stack').innerHTML = STACK.map(([n, i]) => `
+      <div class="group flex items-center gap-3 rounded-2xl border border-white/[.07] bg-white/[.02] px-4 py-3.5 transition hover:border-brand/40 hover:bg-brand/10">
+        <i data-lucide="${i}" class="h-5 w-5 text-white/50 transition group-hover:text-brand-300"></i>
+        <span class="text-sm font-medium">${n}</span>
+      </div>`).join('');
+
+    function mockup(p) {
+      if (p.mobile) {
+        return `<div class="relative mx-auto h-full w-28 rounded-[1.4rem] border-4 border-ink-600 bg-ink-950 p-1.5 shadow-2xl transition-transform duration-700 group-hover:-rotate-6 group-hover:scale-105">
+          <div class="mx-auto mb-1.5 h-1 w-8 rounded-full bg-ink-600"></div>
+          <div class="grid h-14 place-items-center rounded-lg" style="background:linear-gradient(135deg,${p.from},${p.to})"><i data-lucide="${p.icon}" class="h-6 w-6 text-white"></i></div>
+          <div class="mt-1.5 space-y-1.5"><div class="h-5 rounded-md bg-white/[.08]"></div><div class="h-5 rounded-md bg-white/[.08]"></div><div class="h-5 w-2/3 rounded-md bg-white/[.08]"></div></div>
+        </div>`;
+      }
+      const host = p.url ? p.url.replace('https://', '') : p.name.toLowerCase().replace(/\s/g, '-');
+      return `<div class="h-full rounded-xl border border-white/10 bg-ink-950/90 p-2 shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-hover:scale-[1.02]">
+        <div class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-red-400/70"></span><span class="h-2 w-2 rounded-full bg-amber-400/70"></span><span class="h-2 w-2 rounded-full bg-green-400/70"></span>
+          <span class="ml-2 flex h-4 flex-1 items-center gap-1 rounded bg-white/5 px-1.5 font-mono text-[9px] text-white/45"><i data-lucide="lock" class="h-2.5 w-2.5"></i>${host}</span></div>
+        <div class="relative mt-2 flex h-[calc(100%-1.5rem)] flex-col overflow-hidden rounded-lg p-3" style="background:linear-gradient(135deg,${p.from}cc,${p.to}99)">
+          <div class="flex items-center justify-between"><span class="h-2 w-10 rounded bg-white/70"></span><span class="flex gap-1"><span class="h-1.5 w-5 rounded bg-white/40"></span><span class="h-1.5 w-5 rounded bg-white/40"></span><span class="h-1.5 w-5 rounded bg-white/40"></span></span></div>
+          <div class="mt-auto flex items-end justify-between gap-2">
+            <div class="space-y-1.5"><div class="font-display text-base font-bold leading-tight text-white drop-shadow">${p.name}</div><div class="h-1.5 w-24 rounded bg-white/50"></div><div class="h-4 w-14 rounded-md bg-white"></div></div>
+            <div class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur"><i data-lucide="${p.icon}" class="h-6 w-6 text-white"></i></div>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    function renderProjects(filter = 'all') {
+      const list = PROJECTS.filter(p => filter === 'all' || p.cat.includes(filter));
+      $('#projectGrid').innerHTML = list.map((p, i) => {
+        const tag = p.url ? 'a' : 'div';
+        const attrs = p.url ? `href="${p.url}" target="_blank" rel="noopener"` : '';
+        return `<${tag} ${attrs} class="card proj-enter group flex flex-col p-4" style="animation-delay:${i * 60}ms">
+          <div class="relative h-48 overflow-hidden rounded-2xl p-4" style="background:radial-gradient(120% 120% at 0% 0%, ${p.from}33, transparent 60%), radial-gradient(120% 120% at 100% 100%, ${p.to}33, transparent 60%), #0a0a12">
+            ${mockup(p)}
+          </div>
+          <div class="flex flex-1 flex-col px-2 pb-2 pt-5">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-display text-lg font-semibold">${p.name}</h3>
+              ${p.url
+                ? `<span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/15 transition group-hover:rotate-45 group-hover:border-white group-hover:bg-white group-hover:text-ink-950"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span>`
+                : `<span class="shrink-0 whitespace-nowrap rounded-full border border-white/10 px-2.5 py-1 text-[11px] text-white/50">Buyurtma asosida</span>`}
+            </div>
+            ${p.url ? `<span class="mt-1 font-mono text-xs text-mint/80">${p.url.replace('https://', '')}</span>` : ''}
+            <p class="mt-3 text-sm leading-relaxed text-white/60">${p.desc}</p>
+            <div class="mt-auto flex flex-wrap gap-1.5 pt-4">${p.tags.map(t => `<span class="rounded-full bg-white/[.05] px-2.5 py-1 text-[11px] text-white/65">${t}</span>`).join('')}</div>
+          </div>
+        </${tag}>`;
+      }).join('');
+      window.lucide && lucide.createIcons();
+      bindCardGlow();
+    }
+
+    $('#filters').innerHTML = FILTERS.map(([k, l], i) => `<button data-f="${k}" class="filter-btn ${i === 0 ? 'active' : ''} rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/75 transition hover:border-white/40">${l}</button>`).join('');
+    $('#filters').addEventListener('click', e => {
+      const b = e.target.closest('.filter-btn'); if (!b) return;
+      $$('.filter-btn').forEach(x => x.classList.toggle('active', x === b));
+      renderProjects(b.dataset.f);
+    });
+
+    /* ====== INTERAKTIVLIK ====== */
+    function bindCardGlow() {
+      $$('.card').forEach(c => {
+        if (c.dataset.glow) return; c.dataset.glow = 1;
+        c.addEventListener('pointermove', e => {
+          const r = c.getBoundingClientRect();
+          c.style.setProperty('--cx', `${e.clientX - r.left}px`);
+          c.style.setProperty('--cy', `${e.clientY - r.top}px`);
+        });
+      });
+    }
+
+    renderProjects();
+
+    // spotlight
+    window.addEventListener('pointermove', e => {
+      document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+      document.documentElement.style.setProperty('--my', e.clientY + 'px');
+    }, { passive: true });
+
+    // magnetic buttons
+    if (matchMedia('(pointer:fine)').matches) {
+      $$('.magnetic').forEach(el => {
+        el.addEventListener('pointermove', e => {
+          const r = el.getBoundingClientRect();
+          el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px, ${(e.clientY - r.top - r.height / 2) * .25}px)`;
+        });
+        el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+        el.style.transition = 'transform .3s cubic-bezier(.2,.8,.2,1)';
+      });
+    }
+
+    // typed roles
+    (() => {
+      const el = $('#typed'); let r = 0, c = 0, del = false;
+      const tick = () => {
+        const word = ROLES[r];
+        el.textContent = word.slice(0, c);
+        if (!del && c < word.length) c++;
+        else if (del && c > 0) c--;
+        else if (!del) { del = true; return setTimeout(tick, 1800); }
+        else { del = false; r = (r + 1) % ROLES.length; }
+        setTimeout(tick, del ? 35 : 70);
+      };
+      tick();
+    })();
+
+    // reveal + counters
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in');
+        $$('.counter', en.target).forEach(cnt => {
+          if (cnt.dataset.done) return; cnt.dataset.done = 1;
+          const to = +cnt.dataset.to, t0 = performance.now(), d = 1600;
+          const step = now => {
+            const p = Math.min((now - t0) / d, 1);
+            cnt.textContent = Math.round(to * (1 - Math.pow(1 - p, 4)));
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        });
+        io.unobserve(en.target);
+      });
+    }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+    $$('.reveal').forEach(el => io.observe(el));
+
+    // nav, progress, to-top
+    const navInner = $('#navInner'), toTop = $('#toTop'), prog = $('#progress');
+    const onScroll = () => {
+      const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+      prog.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+      navInner.classList.toggle('glass', y > 30);
+      navInner.classList.toggle('shadow-2xl', y > 30);
+      const show = y > 700;
+      toTop.classList.toggle('opacity-0', !show);
+      toTop.classList.toggle('translate-y-20', !show);
+    };
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // mobile menu
+    $('#menuBtn').addEventListener('click', () => $('#mobileMenu').classList.toggle('hidden'));
+    $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => $('#mobileMenu').classList.add('hidden')));
+
+    // form chips
+    $$('#typeChips .chip').forEach(ch => ch.addEventListener('click', () => {
+      ch.classList.toggle('bg-brand'); ch.classList.toggle('border-brand'); ch.classList.toggle('text-white');
+    }));
+
+    // form -> WhatsApp (matn tayyorlanadi, foydalanuvchi bir bosishda yuboradi)
+    $('#orderForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const name = $('#fName').value.trim(), phone = $('#fPhone').value.trim(), msg = $('#fMsg').value.trim();
+      const types = $$('#typeChips .chip.bg-brand').map(x => x.textContent).join(', ');
+      if (!name || !phone) { $('#formErr').classList.remove('hidden'); return; }
+      $('#formErr').classList.add('hidden');
+      const text = `Assalomu alaykum, Ozodbek!\n\nIsm: ${name}\nTelefon: ${phone}\nLoyiha turi: ${types || '—'}\n\n${msg}`;
+      navigator.clipboard?.writeText(text).catch(() => {});
+      window.open('https://wa.me/998913323431?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+
+    $('#year').textContent = new Date().getFullYear();
+    window.lucide && lucide.createIcons();
+    bindCardGlow();
+
+    // loader
+    $('#loaderBar').style.width = '100%';
+    const hide = () => setTimeout(() => $('#loader').classList.add('loader-done'), 450);
+    document.readyState === 'complete' ? hide() : addEventListener('load', hide);
+  </script>
+</body>
+</html>
